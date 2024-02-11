@@ -21,7 +21,7 @@ spec:
             - name: DB_HOST
               valueFrom:
                 secretKeyRef:
-                  name: db-secrets
+                  name: db-secret
                   key: db-host
             - name: DB_PASSWORD
               valueFrom:
