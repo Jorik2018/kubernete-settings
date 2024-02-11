@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nuxt-site
-          image: jorik2020/nuxt-site
+          image: jorik2020/nuxt-site:0.1
           ports:
             - containerPort: 3000
           env:
