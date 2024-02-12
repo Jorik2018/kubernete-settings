@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: frontend-service
 spec:
-  type: ClusterIP
-  #type: NodePort
+  type: NodePort
   selector:
     app: nuxt-site
   ports:
     - protocol: TCP
-      port: 8811
+      port: 8800
       targetPort: 3000
