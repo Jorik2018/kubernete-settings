@@ -4,16 +4,16 @@ metadata:
   name: ubunto-ingress
 spec:
   rules:
-  - host: localhost
+  - host: 172.16.3.200
     http:
       paths:
       - path: /blog
         pathType: Prefix
         backend:
           service:
-            name: frontend-service-nodeport
+            name: frontend-service
             port:
-              number: 8800
+              number: 8811
       # - path: /api-1
       #   pathType: Prefix
       #   backend:
