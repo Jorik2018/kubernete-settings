@@ -9,7 +9,7 @@ spec:
       template:
         spec:
           containers:
-          - name: debug_mongodb
+          - name: debug-mongodb
             image: jorik2020/python_mongodb:2  # Replace with your actual image name and tag
             command: ["poetry", "run", "python", "mongodb_pandas_project/main.py", "test"]  # Command to run your script
           restartPolicy: OnFailure
