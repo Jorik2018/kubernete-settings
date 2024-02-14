@@ -4,7 +4,7 @@ metadata:
   name: debug-mongodb
   namespace: wappe
 spec:
-  schedule: "*/1 * * * *"  # Cron expression for running every 5 minutes
+  schedule: "*/10 * * * *"  # Cron expression for running every 5 minutes
   jobTemplate:
     spec:
       template:
