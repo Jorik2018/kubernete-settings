@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: debug mongodb
+  name: debug-mongodb
 spec:
   schedule: "*/1 * * * *"  # Cron expression for running every 5 minutes
   jobTemplate:
@@ -9,7 +9,7 @@ spec:
       template:
         spec:
           containers:
-          - name: debug_mongodb
+          - name: debug-mongodb
             image: jorik2020/python_mongodb:3  # Replace with your actual image name and tag
             command: ["poetry", "run", "python", "-m", "mongodb_pandas_project.main", "test"]  # Command to run your script
           restartPolicy: OnFailure
