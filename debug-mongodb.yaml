@@ -10,6 +10,6 @@ spec:
         spec:
           containers:
           - name: debug-mongodb
-            image: jorik2020/python_mongodb:5  # Replace with your actual image name and tag
+            image: jorik2020/python_mongodb:6  # Replace with your actual image name and tag
             command: ["poetry", "run", "python", "-m", "mongodb_pandas_project.main", "test"]  # Command to run your script
           restartPolicy: OnFailure
