@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: debug-mongodb
+  namespace: wappe
 spec:
   schedule: "*/1 * * * *"  # Cron expression for running every 5 minutes
   jobTemplate:
