@@ -12,4 +12,25 @@ spec:
           - name: debug-mongodb
             image: jorik2020/python_mongodb:6  # Replace with your actual image name and tag
             command: ["poetry", "run", "python", "-m", "mongodb_pandas_project.main", "test"]  # Command to run your script
+            env:
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: wappe
+                  key: MONGODB_URI
+            - name: MONGODB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: wappe
+                  key: MONGODB_NAME
+            - name: AZURE_CONN_STR
+              valueFrom:
+                secretKeyRef:
+                  name: wappe
+                  key: AZURE_CONN_STR
+            - name: AZURE_CONTAINER
+              valueFrom:
+                secretKeyRef:
+                  name: wappe
+                  key: AZURE_CONTAINER
           restartPolicy: OnFailure
