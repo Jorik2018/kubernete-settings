@@ -4,7 +4,7 @@ metadata:
   name: ubunto-ingress
 spec:
   rules:
-  - host: "ubunto.interal"
+  - host: localhost
     http:
       paths:
       - path: /blog
