@@ -11,7 +11,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: frontend-service
+            name: frontend-service-nodeport
             port:
               number: 8811
       # - path: /api-1
