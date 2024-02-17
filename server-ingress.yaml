@@ -13,7 +13,7 @@ spec:
           service:
             name: frontend-service-nodeport
             port:
-              number: 8811
+              number: 8800
       # - path: /api-1
       #   pathType: Prefix
       #   backend:
